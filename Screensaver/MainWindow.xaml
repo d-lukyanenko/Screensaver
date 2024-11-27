@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Screensaver"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
     <Grid>
+        <TextBlock x:Name="Message" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Hello Screensaver" VerticalAlignment="Center" FontSize="36"/>
 
     </Grid>
 </Window>

@@ -19,6 +19,25 @@ namespace Screensaver
         public MainWindow()
         {
             InitializeComponent();
+
+        }
+
+        // Післяобробка завантаження форми
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            string[] args = Environment.GetCommandLineArgs();
+            if (args.Length > 1)
+            {
+                foreach (string arg in args)
+                {
+                    switch (arg.ToLower())
+                    {
+                        case "/c":
+                            MessageBox.Show("Налаштування відсутні", "Налаштування");
+                            break;
+                    }
+                }
+            }
         }
     }
 }
